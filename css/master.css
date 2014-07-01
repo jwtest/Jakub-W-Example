@@ -164,9 +164,35 @@ sidebar .list-group a:hover{
 }
 .navbar-default .navbar-link:hover {
 	color: #ffffff;
+	float: left;
 }
 
 @media (max-width: 767px) {
+	.navbar-default .navbar-nav{
+		display: inline;
+	}
+	.navbar-default .navbar-nav > li{
+		display: block;
+		float: left;
+	}
+	.currency-drop-wrap{
+		margin-top: 5px;
+	}
+	.menu-custom{
+		padding-bottom: 2px;
+		margin-top: -2px!important;
+		float: right;
+	}
+	.menu-custom li{
+		
+		float: left;
+	}
+	.navbar-nav .open .dropdown-menu{
+		float: right;
+	}
+	
+
+
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		color: #cdbfd2;
 	}
@@ -177,4 +203,23 @@ sidebar .list-group a:hover{
 		color: #ffffff;
 		background-color: #735c9a;
 	}
+}
+
+@media (max-width: 1199px) and (min-width: 400px) {
+	sidebar{
+		display: block;
+		float: left;
+		width: 40%;
+	}
+	#dashboard{
+		width: 60%;
+		display: block;
+		float: right;
+	}
+	#domains{
+		display: block;
+		float: left;
+		width: 100%;
+	}
+
 }

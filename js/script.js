@@ -14,4 +14,13 @@ $( document ).ready(function() {
 		$('.currentCurrency').text(newCurrency);
 	});
 
+	$('.master-checkbox').click(function(){
+		if($(this).is(":checked")){
+			$('#dashboard-table tr input').prop('checked', true);
+		}
+		else{
+			$('#dashboard-table tr input').prop('checked', false);
+		}
+	});
+
 });
