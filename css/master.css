@@ -108,7 +108,12 @@ sidebar .list-group a:hover{
 	background: #e5e3e9;
 	text-shadow: 1px 0 0 #fff;
 }
-
+.active-menu-mobile{
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 2em;
+}
 
 /*sidebar*/
 
@@ -205,14 +210,14 @@ sidebar .list-group a:hover{
 	}
 }
 
-@media (max-width: 1199px) and (min-width: 400px) {
+@media (max-width: 1200px) and (min-width: 767px) {
 	sidebar{
 		display: block;
 		float: left;
-		width: 40%;
+		width: 30%;
 	}
 	#dashboard{
-		width: 60%;
+		width: 70%;
 		display: block;
 		float: right;
 	}
@@ -222,4 +227,11 @@ sidebar .list-group a:hover{
 		width: 100%;
 	}
 
+}
+@media (max-width: 767px) and (min-width: 480px){
+	.dashboard-box{
+		width: 45%;
+		display: block;
+		float: left;
+	}
 }

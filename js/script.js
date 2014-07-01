@@ -23,4 +23,53 @@ $( document ).ready(function() {
 		}
 	});
 
+		var $dims = {
+
+		width: null,
+
+		height: null
+
+		};  
+
+		
+
+		$(function () {
+
+
+		  $(window).bind( "resize", function ( event ) {
+
+		    var $this = $(this);
+
+		    $.each( $dims, function (key) {
+
+		      $dims[ key ] = $this[ key ]();
+
+		      if($dims.width!=null &&$dims.width<=767){
+			 	var tempMenu = $('sidebar').children();
+			 	$('sidebar').removeClass('col-lg-2');
+			 	$('.menu-mobile').addClass('active-menu-mobile');
+			 	$('.menu-mobile').append(tempMenu);
+			 }
+			 if($dims.width!=null && $dims.width>767){
+			 	var tempMenu = $('.menu-mobile').children();
+			 	$('sidebar').append(tempMenu);
+			 	$('sidebar').addClass('col-lg-2');
+			 	$('.menu-mobile').removeClass('active-menu-mobile');
+			 }
+
+
+		    });
+
+
+		  });
+
+		});
+
+
+
+
+
+	 
+
 });
+
